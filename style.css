@@ -1,0 +1,80 @@
+:root {
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 2rem;
+
+    --colour-text: #fefefe;
+    --colour-bg: #010101;
+    --colour-surface: #353535;
+    --colour-accent: #b501ff;
+}
+
+* {
+    color: var(--colour-text);
+    background-color: var(--colour-bg);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header {
+    justify-content: space-between;
+    background-color: var(--colour-surface);
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+}
+
+header * {
+    background-color: var(--colour-surface);
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* wrapper for the content in main */
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+}
+
+.wrapper * {
+    background-color: inherit;
+}
+
+/* the blurb at the top of the main page */
+.hero {
+    text-align: center;
+    padding-block: calc(var(--space-4) * 4)
+}
+
+.hero p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* a cluster of things in a row */
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.card {
+    text-align: center;
+    padding: var(--space-2);
+    background-color: var(--colour-surface);
+}
