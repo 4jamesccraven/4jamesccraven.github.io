@@ -52,6 +52,10 @@ header * {
     align-items: center;
 }
 
+.current {
+    color: var(--colour-text);
+}
+
 /* wrapper for the content in main */
 .wrapper {
     max-width: 1200px;
@@ -100,16 +104,41 @@ header * {
     gap: var(--space-2);
 }
 
+.stack {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.stack > .card {
+    max-width: 600px;
+    min-width: 600px;
+}
+
+/* box/card thing */
 .card {
     max-width: 400px;
     min-width: 400px;
     padding: var(--space-2);
-    border-radius: var(--space-1);
+    border-radius: var(--space-2);
 
     text-align: center;
     background-color: var(--colour-surface);
 }
 
+.card * {
+    background-color: inherit;
+}
+
 .card h3 {
     color: var(--colour-accent);
+    margin-bottom: 0;
+}
+
+.card a {
+    color: var(--colour-accent);
+    font-size: 0.85em;
 }
