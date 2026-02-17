@@ -23,10 +23,26 @@ a {
     text-decoration: none;
 }
 
+/* Navigation Bar */
 header {
     justify-content: space-between;
     background-color: var(--colour-surface);
     padding: var(--space-2);
+    border-radius: var(--space-2)
+}
+
+header * {
+    background-color: var(--colour-surface);
+}
+
+/* Links accented by default... */
+header a {
+    color: var(--colour-accent);
+}
+
+/* ... unless they're for the current page */
+.current {
+    color: var(--colour-text);
 }
 
 header h1 {
@@ -34,12 +50,9 @@ header h1 {
     margin-bottom: 0;
 }
 
-header a {
-    color: var(--colour-accent);
-}
-
-header * {
-    background-color: var(--colour-surface);
+/* Applied to <body> while dynamic content is loaded */
+.preload {
+    visibility: hidden;
 }
 
 .sticky {
@@ -50,10 +63,6 @@ header * {
 .flex {
     display: flex;
     align-items: center;
-}
-
-.current {
-    color: var(--colour-text);
 }
 
 /* wrapper for the content in main */
